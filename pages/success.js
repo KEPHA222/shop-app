@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
+import { useStateContext } from "../context/StateContext";
 import { runFireworks } from "../lib/utils";
 
-import { useStateContext } from "../context/StateContext";
 const success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
 
@@ -13,7 +13,7 @@ const success = () => {
     setTotalPrice(0);
     setTotalQuantities(0);
     runFireworks();
-  });
+  }, []);
 
   return (
     <div className="success-wrapper">
@@ -24,8 +24,8 @@ const success = () => {
         <h2>Thank you for your Order!</h2>
         <p className="email-msg">Check your email inbox for the receipt.</p>
         <p className="description">
-          If you have any question, please email{" "}
-          <a className="email" href="mailto:order@example.com">
+          If you have any question, please email
+          <a className="email" href="kephamotari1@gmail.com">
             kephamotari1@gmail.com
           </a>
         </p>
