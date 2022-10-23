@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { BsBagCheckFill } from "react-icons/bs";
-
 import { useStateContext } from "../context/StateContext";
 import { runFireworks } from "../lib/utils";
 
@@ -22,12 +21,12 @@ const Success = () => {
         <p className="icon">
           <BsBagCheckFill />
         </p>
-        <h2>Thank you for your order!</h2>
+        <h2>Thank you for your Order!</h2>
         <p className="email-msg">Check your email inbox for the receipt.</p>
         <p className="description">
-          If you have any questions, please email
-          <a className="email" href="mailto:order@example.com">
-            order@example.com
+          If you have any question, please email
+          <a className="email" href="kephamotari1@gmail.com">
+            kephamotari1@gmail.com
           </a>
         </p>
         <Link href="/">
@@ -40,4 +39,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default success;
